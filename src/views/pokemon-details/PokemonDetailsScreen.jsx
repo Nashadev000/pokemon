@@ -1,19 +1,24 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
 
-const PokemonDetailsScreen = () => {
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+
+
+
+const PokemonDetailsScreen = ({ navigation }) => {
+
     return (
         <View>
-            <Text style={styles.deailsText}>PokemonDetailsScreen</Text>
+            <TouchableOpacity
+            title="regresar"
+            onPress={()=>navigation.navigate('Home')}>
+                <Text>regresar a home</Text>
+            </TouchableOpacity>
         </View>
+
     )
 }
 
 export default PokemonDetailsScreen
 
 const styles = StyleSheet.create({
-    deailsText:{
-        backgroundColor: 'red'
-    }
 
 })
