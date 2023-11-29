@@ -1,10 +1,20 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import Constants from 'expo-constants'
 
+const PokemonRankingScreen = ({ navigation }) => {
+    const PokemonRanking = {
+            agua:{
+                pok1: 'Vaporeon',
+                pok2: 'Blastoise',
+                pok3: 'Gyarados',
+            },
+            Fuego:{
+                pok4: 'Charizard',
+                pok5: 'Arcanine',
+                pok6: 'Ninetales'
+            }
+        }
 
-
-
-const PokemonDetailsScreen = ({ navigation }) => {
     return (
         <View style={styles.containerDetails}>
             <TouchableOpacity
@@ -16,24 +26,21 @@ const PokemonDetailsScreen = ({ navigation }) => {
     )
 }
 
-export default PokemonDetailsScreen
+export default PokemonRankingScreen
 
 const styles = StyleSheet.create({
     containerDetails: {
         flex: 1,
         backgroundColor: '#282940',
-        flexDirection:'row',
         paddingTop: Constants.statusBarHeight,
-        justifyContent:'center'
+        justifyContent:'flex-end'
     },
     styleButtonDetails: {
-        
         backgroundColor: '#BACDD9',
         borderRadius: 10,
         marginTop: 10,
         padding: 15,
-        alignSelf:'flex-end',
-        
+        alignSelf:'center',
     },
     styleTextButton: {
         fontWeight: '600',
@@ -44,5 +51,6 @@ const styles = StyleSheet.create({
         color: 'white',
         fontSize: 40,
         alignSelf: 'center'
-    }
+    },
+
 })

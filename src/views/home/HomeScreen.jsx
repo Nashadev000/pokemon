@@ -10,17 +10,15 @@ const HomeScreen = ({ navigation }) => {
             <ScrollView style={styles.container}>
                 <Header />
                 <PokemonLists />
+            </ScrollView>
                 <TouchableOpacity
                     style={styles.styleButton}
-                    title="ir a detalles"
-                    onPress={() => navigation.navigate('PokemonDetails')}
+                    onPress={() => navigation.navigate('PokemonRanking')}
                 >
                     <Text style={styles.styleText}>
-                        Go to Details
+                        Go To Ranking
                     </Text>
                 </TouchableOpacity>
-
-            </ScrollView>
         </View>
     )
 }
@@ -34,11 +32,11 @@ const styles = StyleSheet.create({
         padding: 10
     },
     styleButton: {
-        alignItems: 'center',
+        alignSelf:'center',
         backgroundColor: '#BACDD9',
         borderRadius: 10,
-        marginHorizontal: 90,
-        padding: 10,
+        marginTop:10,
+        padding: 15
 
     },
     styleText: {

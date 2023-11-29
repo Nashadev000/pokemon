@@ -11,7 +11,7 @@ const Header = () => {
         <View style={{ marginTop: 35 }}>
             <Text style={styles.title}>Pokemon!</Text>
             <View style={{}}>
-                <Text style={styles.titleUSer} >Bienvenido {userDate.name} al emocionante mundo de Pokémon</Text>
+                <Text style={styles.titleUSer} >Bienvenida {userDate.name} al emocionante mundo de Pokémon</Text>
             </View>
             <View>
                 <Image

@@ -7,7 +7,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
 
 import HomeScreen from "./src/views/home/HomeScreen";
-import PokemonDetailsScreen from "./src/views/pokemon-details/PokemonDetailsScreen";
+import PokemonRankingScreen from "./src/views/pokemon-ranking/PokemonRankingScreen";
 
 export default function App() {
     
@@ -18,6 +18,9 @@ export default function App() {
         <NavigationContainer>
             <Stack.Navigator
                 initialRouteName="Home"
+                // screenOptions={{headerStyle:{
+                //     backgroundColor:'violet'
+                // }}}
             >
                 <Stack.Screen
                     name="Home"
@@ -28,12 +31,12 @@ export default function App() {
                 </Stack.Screen>
 
                 <Stack.Screen
-                    name="PokemonDetails"
-                    component={PokemonDetailsScreen}
-                    options={{title: 'pokemon details'}}
-                    // options={{ headerShown: false }}
+                    name="PokemonRanking"
+                    component={PokemonRankingScreen}
+                    // options={{title: 'Pokemon Details'}}
+                    options={{ headerShown: false }}
                 >
-                    {/* {() => <PokemonDetailsScreen />} */}
+                    {/* {() => <PokemonRankingScreen />} */}
                 </Stack.Screen>
 
             </Stack.Navigator>
